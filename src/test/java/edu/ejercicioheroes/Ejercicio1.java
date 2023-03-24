@@ -2,6 +2,7 @@ package edu.ejercicioheroes;
 
 import edu.ejercicioheroes.domain.*;
 import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.*;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class Ejercicio1 {
         );
 
         tracer.agregarAliado(winston);
+        winston.agregarAliado(tracer);
 
         Villano widowMaker = new Villano(
                 new Arma("Sniper rifle", 100,1)
